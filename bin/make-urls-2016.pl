@@ -1,11 +1,19 @@
 #!/usr/bin/env perl
 
+# make-urls-2016.pl - given a few configurations, output a set of SQL update statements
+
+# Eric Lease Morgan <emorgan@nd.edu>
+# (c) University of Notre Dame; distributed under a GNU Public License
+
+# April 23, 2020 - first documentation; during a pandemic
+
+
 # configure
-use constant URLS     => './etc/platforms.txt';
-use constant DATABASE => './etc/candidates.db';
+use constant URLS     => './etc/urls-2016.txt';
+use constant DATABASE => './etc/candidates-master.db';
 use constant DRIVER   => 'SQLite';
-use constant QUERY    => 'SELECT SQ_CANDIDATO FROM candidates WHERE DS_CARGO IS "PREFEITO" ORDER BY SQ_CANDIDATO;';
-use constant TEMPLATE => 'UPDATE candidates SET url = "##URL##" WHERE SQ_CANDIDATO IS "##KEY##";';
+use constant QUERY    => 'SELECT sequence FROM candidates WHERE year IS "2016" ORDER BY sequence;';
+use constant TEMPLATE => 'UPDATE candidates SET url = "##URL##" WHERE sequence IS "##KEY##";';
 
 # require
 use strict;
@@ -42,7 +50,7 @@ $handle->execute() or die $DBI::errstr;
 while( my $mayor = $handle->fetchrow_hashref ) {
 
 	# parse
-	my $key = $$mayor{ 'SQ_CANDIDATO' };
+	my $key = $$mayor{ 'sequence' };
 	
 	# check for key in platforms
 	if ( $platforms{ $key } ) {

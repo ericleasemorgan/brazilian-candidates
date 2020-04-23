@@ -1,0 +1,207 @@
+Delivered-To: emorgan@nd.edu
+Received: by 2002:a92:5ccd:0:0:0:0:0 with SMTP id d74csp246187ilg;
+        Thu, 9 Apr 2020 21:02:48 -0700 (PDT)
+X-Received: by 2002:a17:90a:c256:: with SMTP id d22mr3179270pjx.78.1586491368199;
+        Thu, 09 Apr 2020 21:02:48 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1586491368; cv=none;
+        d=google.com; s=arc-20160816;
+        b=lCubCJvHaiwjSOdYL2+pdqDJkI13NvWna6T+Yw7riEVsLAbvTwa4mxpfo/h8XGmYp+
+         I81Wgqb/FbK22F3TQYsRju8ZF5q1AIBDDqbyTUbeJWlvrNfvkoNS0YEiOZ+ey1ALdkVn
+         fTtpAiBKvJZpVRuRnXCTLB2Dl+AdXHUCQEwxVQPXl0ldpM/rmPYjMK2ycKMBclIlNJAe
+         oUspXNSnKKp+HONw3cRqtiN9QBa/rGDm0wR4+8kHEYK+KM0cvyZjyAQ/642y97RywEUM
+         BGqszdqv0A6Ko2KiNu4WUwSGtHTP8btIGVvDfQPrEoRKxmk1ooXMks0Smxo0BVgmORnQ
+         nE9g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=SW41b90qOUStpKVvUZvrmOhuzPalEAY0bjT7kmNYscQ=;
+        b=F0HrKGeVugYvwSu4m2iYE4H5iaA6tFY4/FKo4Clzds8RC8AgJGKnff+poXbBtQmKRz
+         tmnp7lYUhW+I4Me0AogyBFNAd8wRe3D8/DOsLNGRMsNNQklSQcHjSJ3TLDjFLGd4F4Xz
+         QC0r9qKiVk51eiEbOXwXoPFDwzYscMR22XJUu+dengCP9PKtkcSagQF+4hozP40xvwHj
+         p3s4cwofzRDwoQmamfe/tPAkBLCRl7u6g34U8/nZBtPDOY5hXHC0ATF+MA9Z7jPkR+Ke
+         q+nqBZIsk1bYvWxiWBLDp6ONOV6fdAUnwo6u6R/3/xNsKjrcH7I6vX6eqpmERQudjak/
+         BQgQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@nd.edu header.s=google header.b=Q9vnI+Sm;
+       spf=pass (google.com: domain of jturne13@nd.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=jturne13@nd.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=nd.edu
+Return-Path: <jturne13@nd.edu>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id n3sor1256052pld.3.2020.04.09.21.02.48
+        for <emorgan@nd.edu>
+        (Google Transport Security);
+        Thu, 09 Apr 2020 21:02:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jturne13@nd.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@nd.edu header.s=google header.b=Q9vnI+Sm;
+       spf=pass (google.com: domain of jturne13@nd.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=jturne13@nd.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=nd.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=nd.edu; s=google;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=SW41b90qOUStpKVvUZvrmOhuzPalEAY0bjT7kmNYscQ=;
+        b=Q9vnI+SmrjgEGH2xC42VkMC1w9lYyY8hfTFCmuuWfT+/iIxXXGUsp5kWqXC3XdJEXQ
+         auxoz4B7hD0AoxJSiRD2RjxgeMDMgbXtyNAL1gRnHwDBGK8ci+5UkcmSYj1PhR+MvjBC
+         l5nEcx7q4z7Lp2313fnUDzY2obVA7ufl8n8oeVDDl2N22hpOL0XL3qO2HoNxWB3vOAqy
+         FHiuHe689DlfUFpOENb0vAsvdTh+G0qW+9IURvuQlN3ak9ivQVrOBDieJ/A/TDKLhJ/n
+         n0aQqTExGLsA+HpZuAnTrg3TaJwfQ0akLv2VTnwFjksmRGdHKzdulPSzHR/Fmbpxsmh1
+         XLOQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=SW41b90qOUStpKVvUZvrmOhuzPalEAY0bjT7kmNYscQ=;
+        b=OZXttrdGzXTsw+KlPzpgRUjhYEn18URNglQcAf4NIBRKstpBoMIOP3itoO4PlEbpox
+         uA+BSNQkV0ESrDeAHcxSDDGXjrcss+Cbyk1tfxF2KHwFwSJ8Jv6cSISNLkYvST6tnFER
+         LNLTNmOWL2fCKXxButbZE89XszsU0qSbgCNyJjS3Z7fLTLWVzLibc85jUfrST2afEA6q
+         a8ODq5iVCxmb0EM7rnE6J3rIo+8J8dsli4N1D8HQ4UN6yJcfuiH+o7aIZhr3VQ2eFwoY
+         mGIqhawT1tWJoGXtn7XUi1XYNf1kJFedo/FIRUY7Q0tQl55WpRsO8YzZRB5NSFtPTLdO
+         sS9g==
+X-Gm-Message-State: AGi0PuZZ4Cckbst6sw2y3evlTDS3tkcL2S5+NR8laOIQDhKwpdkMpXSL
+	8tCDD2biG0sQF2q1OsMU4dQDeKj+n0qnzp6woUBrpqFrwCw=
+X-Google-Smtp-Source: APiQypK6ZNMue+baMGyUoasVucDsce4s7cEK/9C/dXeNDdNc8MvLun+NuD1B7hveFwH3m07HcXpubAcXV43UawQ9Tsc=
+X-Received: by 2002:a17:902:262:: with SMTP id 89mr2864943plc.131.1586491367218;
+ Thu, 09 Apr 2020 21:02:47 -0700 (PDT)
+MIME-Version: 1.0
+References: <F8861BD3-81BD-40BC-8BE4-83B8A538C52E@nd.edu> <CAHNYgz7CTU+sBJQHOLRoNg6ykw5kds2s-j7neCUYbSwwpBy3pw@mail.gmail.com>
+ <C95F5480-E431-4BB1-A4FB-44CDC4E5CB08@nd.edu>
+In-Reply-To: <C95F5480-E431-4BB1-A4FB-44CDC4E5CB08@nd.edu>
+From: Jacob Turner <jturne13@nd.edu>
+Date: Fri, 10 Apr 2020 00:02:34 -0400
+Message-ID: <CAHNYgz6gPom_k3_N03dEgk9edDa6HTwfK0fpGAwA08Gz9J_-Dg@mail.gmail.com>
+Subject: Re: Jake/Eric/Mark
+To: Eric Lease Morgan <emorgan@nd.edu>
+Cc: Mark Robison <mrobiso2@nd.edu>
+Content-Type: multipart/mixed; boundary="00000000000062628105a2e7ceb8"
+
+--00000000000062628105a2e7ceb8
+Content-Type: multipart/alternative; boundary="00000000000062627e05a2e7ceb6"
+
+--00000000000062627e05a2e7ceb6
+Content-Type: text/plain; charset="UTF-8"
+
+Eric,
+
+Please find attached a list of column names for the 2012 and 2016 sheets -
+most of the columns for 2016 had a corresponding column in 2012 but
+unfortunately not all.
+
+Best,
+Jake
+
+On Thu, Apr 9, 2020 at 3:29 PM Eric Lease Morgan <emorgan@nd.edu> wrote:
+
+>
+> > Definitely on for 2:00! The 2012 document looks great. Using the readme
+> from the electoral tribunal, I have identified and selected the columns
+> that I would like to keep. Please find attached an enumeration of the
+> columns as they are currently labeled and their appropriate names.
+>
+>
+> Jake, I'm taking back what I previously, said. Yes, please send along
+> English labels for the columns in our database. English columns will make
+> our lives easier. Okay? --Eric M.
+>
+>
+>
+
+-- 
+Jacob Turner
+PhD Student, Department of Political Science
+University of Notre Dame
+Doctoral Student Affiliate, Kellogg Institute for International Studies
+
+--00000000000062627e05a2e7ceb6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Eric,</div><div><br></div><div>Please find attached a=
+ list of column names for the 2012 and 2016 sheets - most of the columns fo=
+r 2016 had a corresponding column in 2012 but unfortunately not all.</div><=
+div><br></div><div>Best,</div><div>Jake<br></div></div><br><div class=3D"gm=
+ail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Thu, Apr 9, 2020 at 3:2=
+9 PM Eric Lease Morgan &lt;<a href=3D"mailto:emorgan@nd.edu">emorgan@nd.edu=
+</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:=
+0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">=
+<br>
+&gt; Definitely on for 2:00! The 2012 document looks great. Using the readm=
+e from the electoral tribunal, I have identified and selected the columns t=
+hat I would like to keep. Please find attached an enumeration of the column=
+s as they are currently labeled and their appropriate names.<br>
+<br>
+<br>
+Jake, I&#39;m taking back what I previously, said. Yes, please send along E=
+nglish labels for the columns in our database. English columns will make ou=
+r lives easier. Okay? --Eric M.<br>
+<br>
+<br>
+</blockquote></div><br clear=3D"all"><br>-- <br><div dir=3D"ltr" class=3D"g=
+mail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr">Jacob Turner<div>PhD=
+ Student, Department of Political Science</div><div>University of Notre Dam=
+e</div><div>Doctoral Student Affiliate, Kellogg Institute for International=
+ Studies</div></div></div></div></div>
+
+--00000000000062627e05a2e7ceb6--
+--00000000000062628105a2e7ceb8
+Content-Type: application/vnd.ms-excel; name="column_names.csv"
+Content-Disposition: attachment; filename="column_names.csv"
+Content-Transfer-Encoding: base64
+Content-ID: <f_k8tnzfuu0>
+X-Attachment-Id: f_k8tnzfuu0
+
+MjAxMiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0KQyxELEYsRyxILEksSixL
+LEwsTSxOLE8sUixTLFQsVSxWLFcsWCxZLFosQUIsQUMsQUQsQU8sQVAsQVEsQVIsLCwsLCwsLCwN
+CkFOT19FTEVJQ0FPLE5VTV9UVVJOTyxTSUdMQV9VRixTSUdMQV9VRSxERVNDUklDQU9fVUUsQ09E
+SUdPX0NBUkdPLERFU0NSSUNBT19DQVJHTyxOT01FX0NBTkRJREFUTyxTRVFVRU5DSUFMX0NBTkRJ
+REFUTyxOVU1FUk9fQ0FORElEQVRPLENQRl9DQU5ESURBVE8sTk9NRV9VUk5BX0NBTkRJREFUTyxO
+VU1FUk9fUEFSVElETyxTSUdMQV9QQVJUSURPLE5PTUVfUEFSVElETyxDT0RJR09fTEVHRU5EQSxT
+SUdMQV9MRUdFTkRBLENPTVBPU0lDQU9fTEVHRU5EQSxOT01FX0xFR0VOREEsQ09ESUdPX09DVVBB
+Q0FPLERFU0NSSUNBT19PQ1VQQUNBTyxOVU1fVElUVUxPX0VMRUlUT1JBTF9DQU5ESURBVE8sSURB
+REVfREFUQV9FTEVJQ0FPLENPRElHT19TRVhPLERFU1BFU0FfTUFYX0NBTVBBTkhBLENPRF9TSVRf
+VE9UX1RVUk5PLERFU0NfU0lUX1RPVF9UVVJOTyxOTV9FTUFJTCwsLCwsLCwsLA0KeWVhcixyb3Vu
+ZCxzdGF0ZSxkaXN0cmljdF9jb2RlLGRpc3RyaWN0LG9mZmljZV9jb2RlLG9mZmljZSxuYW1lLHNl
+cXVlbmNlLG51bWJlcixjcGYsYmFsbG90X25hbWUscGFydHlfaWQscGFydHlfc2hvcnQscGFydHks
+Y29hbGl0aW9uX2NvZGUsY29hbGl0aW9uX3Nob3J0LGNvYWxpdGlvbl9jb21wLGNvYWxpdGlvbixv
+Y2N1cGF0aW9uX2NvZGUsb2NjdXBhdGlvbixlbGVjdG9yYWxfdGl0bGUsYWdlLHNleCxleHBlbnNl
+cyxyZXN1bHRfY29kZSxyZXN1bHQsZW1haWwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLA0KMjAxNiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCws
+LA0KQU5PX0VMRUlDQU8sTlJfVFVSTk8sU0dfVUYsU0dfVUUsTk1fVUUsQ0RfQ0FSR08sRFNfQ0FS
+R08sTk1fQ0FORElEQVRPLFNRX0NBTkRJREFUTyxOUl9DQU5ESURBVE8sTlJfQ1BGX0NBTkRJREFU
+TyxOTV9VUk5BX0NBTkRJREFUTyxOUl9QQVJUSURPLFNHX1BBUlRJRE8sTk1fUEFSVElETyxTUV9D
+T0xJR0FDQU8sLERTX0NPTVBPU0lDQU9fQ09MSUdBQ0FPLE5NX0NPTElHQUNBTyxDRF9PQ1VQQUNB
+TyxEU19PQ1VQQUNBTyxOUl9USVRVTE9fRUxFSVRPUkFMX0NBTkRJREFUTyxOUl9JREFERV9EQVRB
+X1BPU1NFLENEX0dFTkVSTywsQ0RfU0lUX1RPVF9UVVJOTyxEU19TSVRfVE9UX1RVUk5PLE5NX0VN
+QUlMLENEX1RJUE9fRUxFSUNBTyxDRF9FTEVJQ0FPLFNUX1JFRUxFSUNBTyxOUl9QUk9UT0NPTE9f
+Q0FORElEQVRVUkEsTlJfUFJPQ0VTU08sRFNfR0VORVJPLENEX0NPUl9SQUNBLERTX0NPUl9SQUNB
+LFNHX1VGX05BU0NJTUVOVE8NCnllYXIscm91bmQsc3RhdGUsZGlzdHJpY3RfY29kZSxkaXN0cmlj
+dCxvZmZpY2VfY29kZSxvZmZpY2UsbmFtZSxzZXF1ZW5jZSxudW1iZXIsY3BmLGJhbGxvdF9uYW1l
+LHBhcnR5X2lkLHBhcnR5X3Nob3J0LHBhcnR5LGNvYWxpdGlvbl9jb2RlLCxjb2FsaXRpb25fY29t
+cCxjb2FsaXRpb24sb2NjdXBhdGlvbl9jb2RlLG9jY3VwYXRpb24sZWxlY3RvcmFsX3RpdGxlLGFn
+ZSxzZXgsLHJlc3VsdF9jb2RlLHJlc3VsdCxlbWFpbCxlbGVjdGlvbl90eXBlLGVsZWN0aW9uX2Nv
+ZGUsaW5jdW1iZW50LHByb3RvY29sX251bWVyLHByb2Nlc3NfbnVtYmVyLHNleDIscmFjZV9jb2Rl
+LHJhY2UsYmlydGhfc3RhdGUNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQosLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQosLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQosLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQosLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQosLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQosLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQosLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQosLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQosLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQosLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQosLCwsLCwsLCwsLCwsLCwsLCws
+LCwsLCwsLCwsLCwsLCwsLCwNCiwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLA0K
+LCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQo=
+--00000000000062628105a2e7ceb8--

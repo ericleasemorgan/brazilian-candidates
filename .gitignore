@@ -1,8 +1,7 @@
-etc/brazil.utf8
-etc/candidates.csv
-etc/candidates.db
-etc/candidates.ssv
-etc/consulta_cand_2016_BRASIL.csv
-metadata
-pdf
+etc/*.db
+metadata-2012
+metadata-2016
+pdf-2012
+pdf-2016
 tmp
+zips

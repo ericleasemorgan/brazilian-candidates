@@ -1,0 +1,14 @@
+From: Eric Lease Morgan <emorgan@nd.edu>
+Subject: Re: Good news! Re: 2012 platforms
+Date: April 3, 2020 at 11:25:34 AM EDT
+To: Mark Robison <mrobiso2@nd.edu>, Jacob Turner <jturne13@nd.edu>
+
+
+
+On Apr 3, 2020, at 10:07 AM, Mark Robison <mrobiso2@nd.edu> wrote:
+
+Hi Eric, the 2012 CSV files are located here: http://agencia.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2012.zip  This zip file is structured very similarly to the 2016 document, with one giant CSV file for all elections, and then individual CSV files for each Brazilian state.
+
+Downloaded and cached. Thank you. --Eric
+
+

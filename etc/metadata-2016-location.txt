@@ -1,0 +1,31 @@
+From: Mark Robison <mrobiso2@nd.edu>
+Subject: Re: At least 900 mayoral platforms!
+Date: March 27, 2020 at 3:18:57 PM EDT
+To: Eric Lease Morgan <emorgan@nd.edu>
+
+Sorry about that. The link is this: http://agencia.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2016.zip  The CSV file is in the .zip file.
+-Mark
+
+On Thu, Mar 26, 2020 at 3:24 PM Eric Lease Morgan <emorgan@nd.edu> wrote:
+
+> Sorry about that! The csv file is in the zip file available here: http://www.tse.jus.br/eleicoes/estatisticas/repositorio-de-dados-eleitorais-1/repositorio-de-dados-eleitorais, via the Candidatos link.
+
+Please be more specific. What is the URL pointing to the (compressed) CSV file? --Eric
+
+
+
+
+-- 
+Mark Robison
+Political Science, Peace Studies & Economics Librarian
+Hesburgh Libraries
+
+University of Notre Dame
+148 Hesburgh Library
+Notre Dame, IN 46556
+(574) 631-8901
+mark.robison@nd.edu
+Meet with Me: http://bit.ly/meetwithlibrarianmark
+
+ 
+

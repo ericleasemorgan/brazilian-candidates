@@ -1,0 +1,49 @@
+From: Mark Robison <mrobiso2@nd.edu>
+Subject: Re: Good news! Re: 2012 platforms
+Date: April 3, 2020 at 10:07:49 AM EDT
+To: Eric Lease Morgan <emorgan@nd.edu>
+Cc: Jacob Turner <jturne13@nd.edu>
+
+Hi Eric, the 2012 CSV files are located here: http://agencia.tse.jus.br/estatistica/sead/odsele/consulta_cand/consulta_cand_2012.zip  This zip file is structured very similarly to the 2016 document, with one giant CSV file for all elections, and then individual CSV files for each Brazilian state.
+-Mark
+
+On Fri, Apr 3, 2020 at 9:54 AM Eric Lease Morgan <emorgan@nd.edu> wrote:
+
+
+On Apr 2, 2020, at 5:50 PM, Mark Robison <mrobiso2@nd.edu> wrote:
+
+>> > I wasn't getting very far with the Google site searching; Google just didn't index the site very well for the 2012. So I went straight to the Eleição Municipal 2012 website ( http://divulgacandcontas.tse.jus.br/divulga/#/) to see if the candidates' platforms (their "propostas de governo") were there. They were! Google just didn't seem to find the PDFs well. So, I got to clicking around and realized it would be super easy to predict the URL of any candidate platform, using the CSV file of candidates for 2012.
+>> > 
+>> > Take for example the attached spreadsheet, with the candidate information from the Brazilian state of Bahia ("BA"). Any mayor's platform will be at this URL: http://divulgacandcontas.tse.jus.br/dados/2012/1699/BA/x/11/y/proposta.pdf, where x = the value from Column G and y = the value from Column L.
+>> > 
+>> > I grabbed the spreadsheet from the election data repository, downloaded the 2012 candidates, and deleted any candidate who wasn't running at the "Prefeito" level.
+>> > 
+>> > Eric, knowing this information, is there a way to write code to generate all these URL's? Maybe even something like a macro in Excel?
+> 
+> I've been exploring further and feel that, unlike with the 2012 candidate platforms, comprehensively harvesting all the 2016 PDFs will not be possible. Each 2016 platform contains an unpredictable number in its file path -- the digits right after the word "governo." It seems to be random (or at least, unpredictable) based on anything in the spreadsheet.  
+> 
+> For example, here's one URL for a platform: http://divulgacandcontas.tse.jus.br/dados/2016/GO/92274/2/90000010142/proposta_governo1471031101621.pdf
+> All the other components are predictable.... except that "1471031101621" piece.
+> 
+> So I think we'll have to stick with the list of URLs that I already shared, with its ~900 platforms. But for 2012, Jake, we theoretically could generate URLs for every single one of them.
+
+
+Mark, thank you for following through, and what you outline is not a surprise. Next step, Mark, will you please send me a list of one or more URLs pointing to the 2012 CSV files, and I will begin to process them in a manner similar to the 2016 files. Jake, does sound like a good idea to you? --Eric
+
+
+
+
+-- 
+Mark Robison
+Political Science, Peace Studies & Economics Librarian
+Hesburgh Libraries
+
+University of Notre Dame
+148 Hesburgh Library
+Notre Dame, IN 46556
+(574) 631-8901
+mark.robison@nd.edu
+Meet with Me: http://bit.ly/meetwithlibrarianmark
+
+ 
+
