@@ -1,7 +1,8 @@
 etc/*.db
+etc/tika-server.jar
 metadata-2012
 metadata-2016
-pdf-2012
-pdf-2016
+pdf
 tmp
+txt
 zips

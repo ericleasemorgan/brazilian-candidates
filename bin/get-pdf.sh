@@ -9,7 +9,7 @@
 
 
 # configure
-PDFS='./pdf-2012'
+PDF='./pdf'
 
 # make sane
 if [[ -z $1 || -z $2 ]]; then
@@ -20,14 +20,13 @@ fi
 # initialize
 CID=$1
 URL=$2
-mkdir -p $PDFS
 
 # debug
 echo -e "$CID\t$URL" >&2
 
 # initialize some more
-PDF="$PDFS/$CID.pdf"
+PDF="$PDF/$CID.pdf"
 
 # do the work (conditionally) and done
-if [[ ! -f $PDF ]]; then wget -nv -O "$PDF" $URL; echo ; fi
+if [[ ! -f $PDF ]]; then wget -nv --header='From: emorgan@nd.edu' -O "$PDF" $URL; echo ; fi
 exit
