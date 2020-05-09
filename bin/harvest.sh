@@ -10,7 +10,7 @@
 
 # configure
 DB='./etc/candidates-master.db'
-SELECT=".mode tabs\nSELECT cid, url FROM candidates ORDER BY cid;"
+SELECT=".mode tabs\nSELECT cid, url FROM candidates WHERE url > '' ORDER BY cid;"
 GETPDF='./bin/get-pdf.sh'
 PDF='./pdf'
 
