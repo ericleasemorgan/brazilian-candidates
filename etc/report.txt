@@ -1,0 +1,366 @@
+
+Report
+======
+This is a simple report outlining the content of a database of
+Brazilian mayorial candidates. The purpose of the report is
+two-fold. First, the report give one a feel for the database's
+content. Second, the report's generator (report.sql) gives one a
+flavor of how to query the database.
+
+                                                              --
+                              Eric Lease Morgan <emorgan@nd.edu>
+                                                   June 15, 2020
+
+Database structure
+------------------
+CREATE TABLE entities (
+
+	cid      INTEGER,
+	sid      INTEGER,
+	eid      INTEGER, 
+	entity   TEXT,
+	type     TEXT
+	
+);
+CREATE TABLE pos (
+
+	cid      INTEGER,
+	sid      INTEGER,
+	tid      INTEGER, 
+	token    TEXT,
+	lemma    TEXT,
+	pos      TEXT
+	
+);
+CREATE TABLE candidates (
+
+	cid               INTEGER PRIMARY KEY,
+	year              TEXT,
+	round             TEXT,
+	state             TEXT,
+	district_code     TEXT,
+	district          TEXT,
+	office_code       TEXT,
+	office            TEXT,
+	name              TEXT,
+	sequence          TEXT,
+	number            TEXT,
+	cpf               TEXT, 
+	ballot_name       TEXT,
+	party_id          TEXT,
+	party_short       TEXT,
+	party             TEXT,
+	coalition_code    TEXT,
+	coalition_short   TEXT,
+	coalition_comp    TEXT,
+	coalition         TEXT,
+	occupation_code   TEXT,
+	occupation        TEXT,
+	electoral_title   TEXT,
+	age               TEXT,
+	sex               TEXT,
+	expenses          TEXT,
+	result_code       TEXT,
+	result            TEXT,
+	email             TEXT,
+	election_type     TEXT,
+	election_code     TEXT,
+	incumbent         TEXT,
+	protocol_number   TEXT,
+	process_number    TEXT,
+	sex2              TEXT,
+	race_code         TEXT,
+	race              TEXT,
+	birth_state       TEXT,
+	url               TEXT,
+	pds               TEXT,
+	txt               TEXT
+
+);
+
+Total number of records
+-----------------------
+33567
+
+
+Count & tabulation of year values
+---------------------------------
+2016	17250
+2012	16317
+
+
+Count & tabulation of ten most frequent party values
+----------------------------------------------------
+4851	PARTIDO DO MOVIMENTO DEMOCRÁTICO BRASILEIRO
+3594	PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA
+2942	PARTIDO DOS TRABALHADORES
+2575	PARTIDO SOCIAL DEMOCRÁTICO
+2339	PARTIDO PROGRESSISTA
+2238	PARTIDO SOCIALISTA BRASILEIRO
+1888	PARTIDO DEMOCRÁTICO TRABALHISTA
+1667	PARTIDO TRABALHISTA BRASILEIRO
+1574	PARTIDO DA REPÚBLICA
+1546	DEMOCRATAS
+
+
+Count & tabulation of ten most frequent coalition values
+--------------------------------------------------------
+5325	PARTIDO ISOLADO
+205	A FORÇA DO POVO
+137	O TRABALHO CONTINUA
+126	RUMO NOVO COM A FORÇA DO POVO
+119	O PROGRESSO CONTINUA
+105	AGORA É A VEZ DO POVO
+93	JUNTOS SOMOS MAIS FORTES
+90	COM A FORÇA DO POVO
+78	A FORÇA QUE VEM DO POVO
+70	UNIDOS PARA VENCER
+
+
+Count & tabulation of ten most frequent candidate ages
+------------------------------------------------------
+-1	16317
+51	665
+52	627
+48	616
+50	605
+54	605
+53	592
+46	588
+49	588
+47	582
+
+
+Count & tabulation of candidate genders
+---------------------------------------
+15012	MASCULINO
+2227	FEMININO
+11	NÃO DIVULGÁVEL
+0	
+
+
+Count & tabulation of candidate race
+------------------------------------
+11473	BRANCA
+5091	PARDA
+548	PRETA
+97	AMARELA
+30	INDÍGENA
+11	NÃO DIVULGÁVEL
+0	
+
+
+Count & tabulation of ten most frequent candidate occupation
+------------------------------------------------------------
+4309	EMPRESÁRIO
+4030	PREFEITO
+2048	COMERCIANTE
+2008	AGRICULTOR
+1944	ADVOGADO
+1653	OUTROS
+1561	VEREADOR
+1450	MÉDICO
+1316	SERVIDOR PÚBLICO MUNICIPAL
+1171	ADMINISTRADOR
+
+
+Count & tabulation of ten most frequent candidate state
+-------------------------------------------------------
+4939	MG
+4512	SP
+2541	RS
+2469	BA
+2239	PR
+1494	SC
+1442	GO
+1396	MA
+1160	PB
+1153	PE
+
+
+Total number of words (size of corpus)
+--------------------------------------
+39996451
+
+
+Count & tabulation of ten most frequent lemmatized nouns
+--------------------------------------------------------
+141048	município
+110133	programar
+98460	cidade
+91323	ações
+87698	atendimento
+85391	saudar
+77316	serviço
+75688	área
+74813	população
+72539	construção
+
+
+Count & tabulation of ten most frequent lemmatized verb
+--------------------------------------------------------
+233850	ser
+177819	•
+134171	dos
+89745	das
+76915	criar
+67847	do
+67222	ter
+64050	ampliar
+62301	promover
+60046	implantar
+
+
+Count & tabulation of ten most frequent lemmatized adjectives
+-------------------------------------------------------------
+27881	maior
+17985	jovem
+16643	melhor
+15068	estadual
+14781	cultural
+12593	social
+10221	primeiro
+9707	idoso
+8796	rural
+8240	principal
+
+
+Count & tabulation of ten most frequent lemmatized adjectives used by men
+-------------------------------------------------------------------------
+6076	maior
+3412	melhor
+3355	jovem
+3129	cultural
+2859	social
+2846	estadual
+2104	principal
+2073	idoso
+2031	primeiro
+1951	público
+
+
+Count & tabulation of ten most frequent lemmatized adjectives used by women
+---------------------------------------------------------------------------
+954	maior
+570	jovem
+569	melhor
+525	cultural
+479	estadual
+453	social
+368	idoso
+352	primeiro
+317	público
+284	principal
+
+
+Count & tabulation of ten most frequent lemmatized adjectives used in 2012
+--------------------------------------------------------------------------
+20851	maior
+14060	jovem
+12662	melhor
+11743	estadual
+11127	cultural
+9281	social
+7838	primeiro
+7266	idoso
+6960	rural
+5852	principal
+
+
+Count & tabulation of ten most frequent lemmatized adjectives used in 2016
+--------------------------------------------------------------------------
+7030	maior
+3981	melhor
+3925	jovem
+3654	cultural
+3325	estadual
+3312	social
+2441	idoso
+2388	principal
+2383	primeiro
+2268	público
+
+
+Adjectives used by 'PARTIDO DO MOVIMENTO DEMOCRÁTICO BRASILEIRO' members
+------------------------------------------------------------------------
+3883	maior
+2741	melhor
+2394	jovem
+2160	estadual
+1941	cultural
+1523	social
+1372	idoso
+1305	rural
+1239	primeiro
+1062	principal
+
+
+Adjectives used by 'PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA' members
+--------------------------------------------------------------------
+3006	maior
+2045	melhor
+1934	jovem
+1541	cultural
+1534	estadual
+1205	social
+1169	primeiro
+1066	idoso
+990	rural
+879	principal
+
+
+Count & tabulation of ten most frequent people mentioned
+--------------------------------------------------------
+2576	Disponibilizar
+2473	Estabelecer
+2025	R$
+1984	Garantir
+1674	Valorizar
+1598	Manter
+1586	Intensificar
+1561	PSOL
+1528	Prefeito
+1516	Realizar
+
+
+Count & tabulation of ten most frequent organizations mentioned
+---------------------------------------------------------------
+5905	EDUCAÇÃO
+5695	ESPORTE
+5476	PT
+3720	PMDB
+3690	SEBRAE
+3376	PSDB
+3344	PSF
+3242	CRAS
+3086	CONSTRUÇÃO
+3002	PDT
+
+
+Count & tabulation of ten most frequent organizations mentioned a party
+-----------------------------------------------------------------------
+1321	PSDB
+650	EDUCAÇÃO
+635	ESPORTE
+429	SEBRAE
+395	CRAS
+321	PSF
+318	SENAI
+311	Guarda Municipal
+297	LAZER
+280	Conselho Tutelar
+
+
+Count & tabulation of ten most frequent organizations mentioned another party
+-----------------------------------------------------------------------------
+2136	PMDB
+817	EDUCAÇÃO
+778	ESPORTE
+577	PT
+553	SEBRAE
+517	CONSTRUÇÃO
+473	CRAS
+445	PDT
+429	COLIGAÇÃO
+426	PSF
+

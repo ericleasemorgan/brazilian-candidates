@@ -17,7 +17,7 @@ sleep 10
 mkdir -p $TXT
 
 # find all the PDF files and do the work in parallel
-find pdf -name "*.pdf" | parallel $PDF2TXT
+find pdf -name "*.pdf" | parallel -j 8 $PDF2TXT
 
 # end (kill sounds so violent) TIKA and done
 kill $PID

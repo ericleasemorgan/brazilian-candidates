@@ -18,5 +18,5 @@ PDF='./pdf'
 mkdir -p $PDF
 
 # do the work in parallel and done
-printf "$SELECT" | sqlite3 $DB | parallel -j 12 --colsep '\t' $GETPDF
+printf "$SELECT" | sqlite3 $DB | parallel -j 4 --colsep '\t' $GETPDF
 exit

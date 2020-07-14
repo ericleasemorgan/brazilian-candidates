@@ -12,7 +12,7 @@
 PDF='./pdf'
 
 # make sane
-if [[ -z $1 || -z $2 ]]; then
+if [[ -z $1 || -z $2  ]]; then
 	echo "Usage: $0 <cid> <url>" >&2
 	exit
 fi

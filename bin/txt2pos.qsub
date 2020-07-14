@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# configure qsub
+#$ -N TXT2POS
+#$ -t 20000-29422
+#$ -o /afs/crc.nd.edu/user/e/emorgan/projects/mayoral-candidates/log
+
+# find possible all files to process
+FILES=( $( cat ./tmp/files.txt ) )
+
+# do the work
+FILE="${FILES[${SGE_TASK_ID}]}"
+./bin/txt2pos.sh $FILE

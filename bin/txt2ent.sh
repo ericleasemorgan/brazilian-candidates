@@ -4,7 +4,7 @@
 # usage: mkdir ./ent; find ./txt -name "*.txt" | parallel ./bin/txt2ent.sh
 
 
-POS='./ent'
+ENT='./ent'
 TXT2ENT='./bin/txt2ent.py'
 
 if [[ -z $1 ]]; then
@@ -14,7 +14,7 @@ fi
 
 FILE=$1
 BASENAME=$( basename $FILE .txt )
-OUTPUT="$POS/$BASENAME.tsv"
+OUTPUT="$ENT/$BASENAME.tsv"
 
 if [[ ! -f $OUTPUT ]]; then $TXT2ENT $FILE > $OUTPUT; fi
 exit

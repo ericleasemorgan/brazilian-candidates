@@ -1,3 +1,24 @@
+CREATE TABLE entities (
+
+	cid      INTEGER,
+	sid      INTEGER,
+	eid      INTEGER, 
+	entity   TEXT,
+	type     TEXT
+	
+);
+
+CREATE TABLE pos (
+
+	cid      INTEGER,
+	sid      INTEGER,
+	tid      INTEGER, 
+	token    TEXT,
+	lemma    TEXT,
+	pos      TEXT
+	
+);
+
 CREATE TABLE candidates (
 
 	cid               INTEGER PRIMARY KEY,

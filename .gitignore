@@ -1,10 +1,13 @@
 ent
 etc/*.db
 etc/tika-server.jar
+log
 metadata-2012
 metadata-2016
 pdf
 pos
+sql-ent
+sql-pos
 tmp
 txt
 zips
