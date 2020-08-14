@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# configure qsub
+#$ -N ENT2SQL
+#$ -t 20000-29422
+#$ -o /afs/crc.nd.edu/user/e/emorgan/projects/mayoral-candidates/log
+
+# find all files to process
+FILES=( $( cat ./tmp/files.ent ) )
+
+# do the work
+FILE="${FILES[${SGE_TASK_ID}]}"
+./bin/ent2sql.sh $FILE

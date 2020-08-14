@@ -22,7 +22,7 @@ mkdir -p $TMP
 echo "Creating transaction" >&2
 echo "BEGIN TRANSACTION;"                            >  "$TMP/$INSERTS"
 echo $DELETE                                         >> "$TMP/$INSERTS"
-find "$SQLPOS" -type f -name "*.sql" -exec cat {} \+ >> "$TMP/$INSERTS"
+find "$SQLPOS" -type f -name "*.sql" -exec cat {} \; >> "$TMP/$INSERTS"
 echo "END TRANSACTION;"                              >> "$TMP/$INSERTS"
 
 # do the work and done
