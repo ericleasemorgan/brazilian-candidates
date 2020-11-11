@@ -10,9 +10,8 @@
 
 # configure
 BAZIL='./tmp/brazil.utf8'
-MAYORS='./tmp/candidates-2016.txt'
 QUERY='PREFEITO'
 
 # do the work and done
-grep $QUERY $BAZIL > $MAYORS
+grep $QUERY $BAZIL
 exit

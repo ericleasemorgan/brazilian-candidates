@@ -5,15 +5,15 @@
 # Eric Lease Morgan <emorgan@nd.edu>
 # (c) University of Notre Dame; distributed under a GNU Public License
 
-# April 23, 2016 - first documentation; during a pandemic
+# April 23, 2020 - first documentation; during a pandemic
 
 
 # configure
-DB='./etc/candidates-2016.db'
-CSV='./tmp/candidates-2016.csv'
-SCHEMA='./etc/schema-2016.sql'
+DB='./etc/candidates-2020.db'
+CSV='./tmp/candidates-2020.csv'
+SCHEMA='./etc/schema-2020.sql'
 IMPORT=".mode csv\n.import $CSV candidates"
-MODIFYTABLE='./etc/modify-table-2016.sql'
+MODIFYTABLE='./etc/modify-table-2020.sql'
 
 # initialize
 rm -rf $DB

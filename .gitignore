@@ -4,10 +4,12 @@ etc/tika-server.jar
 log
 metadata-2012
 metadata-2016
+metadata-2020/
 pdf
 pos
 sql-ent
 sql-pos
 tmp
+topic-modeling/
 txt
 zips

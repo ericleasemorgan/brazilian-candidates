@@ -14,7 +14,7 @@ OUTPUT='./tmp/brazil.utf8'
 iconv -f iso-8859-1 -t UTF-8 $INPUT > $OUTPUT
 
 # do other work and done
-./bin/extract-mayors.sh
+./bin/extract-mayors.sh > ./tmp/candidates-2016.txt
 ./bin/ssv2csv.sh ./tmp/candidates-2016.txt
 ./bin/csv2db-2016.sh
 exit

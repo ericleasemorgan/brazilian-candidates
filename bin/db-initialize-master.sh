@@ -13,6 +13,7 @@ DB='./etc/candidates-master.db'
 SCHEMA='./etc/schema-master.sql'
 TWELVE2MASTER='./etc/merge2master-2012.sql'
 SIXTEEN2MASTER='./etc/merge2master-2016.sql'
+TWENTY2MASTER='./etc/merge2master-2020.sql'
 
 # initialize
 rm -rf $DB
@@ -21,4 +22,5 @@ rm -rf $DB
 cat $SCHEMA         | sqlite3 $DB
 cat $TWELVE2MASTER  | sqlite3 $DB
 cat $SIXTEEN2MASTER | sqlite3 $DB
+cat $TWENTY2MASTER  | sqlite3 $DB
 exit
