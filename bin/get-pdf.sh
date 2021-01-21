@@ -5,7 +5,8 @@
 # Eric Lease Morgan <emorgan@nd.edu>
 # (c) University of Notre Dame; distributed under a GNU Public License
 
-# April 23, 2020 - first documentation; during a pandemic
+# April    23, 2020 - first documentation; during a pandemic
+# November 18, 2020 - added user-agent to wget command; "Good work, Jake!"
 
 
 # configure
@@ -28,5 +29,5 @@ echo -e "$CID\t$URL" >&2
 PDF="$PDF/$CID.pdf"
 
 # do the work (conditionally) and done
-if [[ ! -f $PDF ]]; then wget -nv --header='From: emorgan@nd.edu' -O "$PDF" $URL; echo ; fi
+if [[ ! -f $PDF ]]; then wget  --tries=1 --timeout=10 --user-agent=windows -nv --header='From: emorgan@nd.edu' -O "$PDF" $URL; echo ; fi
 exit

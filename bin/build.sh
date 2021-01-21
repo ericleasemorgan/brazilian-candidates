@@ -28,7 +28,7 @@ echo "Step #4 of 12: Creating URLs for 2012 data" >&2
 echo "Step #5 of 12: Creating URLs for 2016 data" >&2
 ./bin/insert-urls-2016.sh
 
-echo "Step #6 of 12: Creating URLs for 2016 data" >&2
+echo "Step #6 of 12: Creating URLs for 2020 data" >&2
 ./bin/insert-urls-2020.sh
 
 echo "Step #6 of 12: Updating database with additional 2016 platforms" >&2
@@ -39,6 +39,8 @@ cat ./tmp/additional-2016-platforms.sql | sqlite3 ./etc/candidates-master.db
 
 echo "Step #7 of 12: Dumping database as CSV file" >&2
 ./bin/dump-master.sh
+
+exit
 
 echo "Step #8 of 120: Harvesting PDF" >&2
 ./bin/harvest.sh
