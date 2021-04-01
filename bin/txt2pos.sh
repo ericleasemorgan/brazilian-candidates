@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # txt2pos.sh - given a file, output a TSV file of part-of-speech
-# usage: mkdir -p ./pos; find ./txt -name "*.txt" | parallel ./bin/txt2pos.sh
+# usage: mkdir -p ./pos; find ./txt -name "*.txt" | parallel -j 8 ./bin/txt2pos.sh
 
 
 POS='./pos'

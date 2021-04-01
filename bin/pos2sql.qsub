@@ -2,7 +2,7 @@
 
 # configure qsub
 #$ -N POS2SQL
-#$ -t 10000-29421
+#$ -t 1-8111
 #$ -o /afs/crc.nd.edu/user/e/emorgan/projects/mayoral-candidates/log
 
 # find all files to process
